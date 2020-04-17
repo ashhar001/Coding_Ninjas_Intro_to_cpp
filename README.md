@@ -10,7 +10,7 @@
 ```
 ## Students:
 
-Fork this repo or download this, add the codes and the questions to C++ files that are not present and send it to me at ashar.ansari1020@gmail.com. I accept pull requests immediately and accept email files after reviewing code once. Even 1 question will make this repo shine so that one day STUDENTS who can't afford huge fee of Coding Ninjas can view questions in peace! Start Open Source Contributions today!!! Needless to say, this adds value to your resume.
+Fork this repo or download this, add the codes and the questions to C++ files that are not present and send it to me at ashar.ansari1020@gmail.com.Start Open Source Contributions today!!! Needless to say, this adds value to your resume.
 
 ### Refer the the link below to get upto Rs.1500 discount on Coding Ninjas Courses
 https://classroom.codingninjas.com/app/invite/CHVYN
