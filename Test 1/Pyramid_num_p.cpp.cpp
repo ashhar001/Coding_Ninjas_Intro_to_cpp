@@ -1,45 +1,48 @@
-Check Case
-Send Feedback
-Write a program that takes a character as input and prints either 1, 0 or -1 according to the following rules.
-1, if the character is an uppercase alphabet (A - Z)
-0, if the character is a lowercase alphabet (a - z)
--1, if the character is not an alphabet
-Input format :
-Single Character
-Output format :
-1 or 0 or -1
-Constraints :
-Input can be any character
-Sample Input 1 :
-v
-Sample Output 1 :
-0
-Sample Input 2 :
-V
-Sample Output 2 :
-1
-Sample Input 3 :
-#
-Sample Output 3 :
--1
+Pyramid Number Pattern
+Print the following pattern for the given number of rows.
+Pattern for N = 4
+   1
+  212
+ 32123
+4321234
+Input format : N (Total no. of rows)
 
+Output format : Pattern in N lines
 
-/****************************************** SOLUTION *************************************************************************************/
-
+Sample Input :
+5
+Sample Output :
+        1
+      212
+    32123
+  4321234
+543212345
+		
+		
+/*************************************************** SOLUTION *************************************************************************/
+		
+		
 #include<iostream>
 using namespace std;
-int main() {
-	// Write your code here
-	char a;
-    cin>> a;
+int main(){
+    int n;
+    cin>>n;
+    int i, j, k, l;
     
-    if(a >='a' && a <='z'){
-        cout<<"0";
-    }
-    else if(a >= 'A' && a <= 'Z'){
-        cout<<"1";
-    }
-    else{
-        cout<<"-1";
+    for (i = 1; i <= n; i++)
+    {
+        for (j = n; j > i; j--)
+        {
+            cout<<(" ");
+        }
+        for (k = i; k >= 1; k--)
+        {
+            cout<< k;
+        }
+        for (l = 2; l <= i; l++)
+        {
+            cout<<l;
+        }
+        cout<<"\n";
     }
 }
