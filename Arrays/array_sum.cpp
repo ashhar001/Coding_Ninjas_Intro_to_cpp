@@ -1,45 +1,40 @@
-Check Case
-Send Feedback
-Write a program that takes a character as input and prints either 1, 0 or -1 according to the following rules.
-1, if the character is an uppercase alphabet (A - Z)
-0, if the character is a lowercase alphabet (a - z)
--1, if the character is not an alphabet
-Input format :
-Single Character
-Output format :
-1 or 0 or -1
+Array Sum
+Given an array of length N, you need to find and print the sum of all elements of the array.
+Input Format :
+Line 1 : An Integer N i.e. size of array
+Line 2 : N integers which are elements of the array, separated by spaces
+Output Format :
+Sum
 Constraints :
-Input can be any character
-Sample Input 1 :
-v
-Sample Output 1 :
-0
-Sample Input 2 :
-V
-Sample Output 2 :
-1
-Sample Input 3 :
-#
-Sample Output 3 :
--1
-
-
-/****************************************** SOLUTION *************************************************************************************/
-
+1 <= N <= 10^6
+Sample Input :
+3
+9 8 9
+Sample Output :
+26
+	
+	
+/***************************************************** SOLUTION **************************************************************************/
+	
+	
 #include<iostream>
 using namespace std;
-int main() {
-	// Write your code here
-	char a;
-    cin>> a;
+
+int main(){
+    int n;
+    cin >> n;
     
-    if(a >='a' && a <='z'){
-        cout<<"0";
+    int arr[100000];
+    
+    for(int i = 0; i < n; i++){
+        cin >> arr[i];
     }
-    else if(a >= 'A' && a <= 'Z'){
-        cout<<"1";
+	
+    int sum = 0;
+    
+    for(int i = 0; i < n; i++){
+        sum = sum + arr[i];
     }
-    else{
-        cout<<"-1";
-    }
+    
+    cout << sum;
 }
