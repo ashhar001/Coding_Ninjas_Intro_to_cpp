@@ -1,45 +1,30 @@
-Check Case
-Send Feedback
-Write a program that takes a character as input and prints either 1, 0 or -1 according to the following rules.
-1, if the character is an uppercase alphabet (A - Z)
-0, if the character is a lowercase alphabet (a - z)
--1, if the character is not an alphabet
-Input format :
-Single Character
-Output format :
-1 or 0 or -1
-Constraints :
-Input can be any character
+Check Palindrome
+Given a String s, check it its palindrome. Return true if string is palindrome, else return false.
+Palindrome strings are those, where string s and its reverse is exactly same.
+Input Format :
+ String S
+Output Format :
+"true" if S is palindrome, else "false"
 Sample Input 1 :
-v
+abcdcba
 Sample Output 1 :
-0
-Sample Input 2 :
-V
-Sample Output 2 :
-1
-Sample Input 3 :
-#
-Sample Output 3 :
--1
+true 
+	
+	
+/********************************************************* SOLUTION *******************************************************************/
+	
+	
+#include<string.h>
+bool checkPalindrome(char str[]){
 
-
-/****************************************** SOLUTION *************************************************************************************/
-
-#include<iostream>
-using namespace std;
-int main() {
-	// Write your code here
-	char a;
-    cin>> a;
-    
-    if(a >='a' && a <='z'){
-        cout<<"0";
-    }
-    else if(a >= 'A' && a <= 'Z'){
-        cout<<"1";
-    }
-    else{
-        cout<<"-1";
-    }
+    int i=0;
+    int j = strlen(str) - 1;
+    while(j > i){
+        if(str[i] != str[j]){
+            return false;
+        }   
+        i++;
+        j--;
+    }    
+    return true;
 }
