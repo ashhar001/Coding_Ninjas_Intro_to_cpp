@@ -1,45 +1,44 @@
-Check Case
+Print 2D array
 Send Feedback
-Write a program that takes a character as input and prints either 1, 0 or -1 according to the following rules.
-1, if the character is an uppercase alphabet (A - Z)
-0, if the character is a lowercase alphabet (a - z)
--1, if the character is not an alphabet
+Given a 2D integer array with n rows and m columns. Print the 0th row from input n times, 1st row n-1 times…..(n-1)th row will be printed 1 time.
 Input format :
-Single Character
-Output format :
-1 or 0 or -1
-Constraints :
-Input can be any character
-Sample Input 1 :
-v
-Sample Output 1 :
-0
-Sample Input 2 :
-V
-Sample Output 2 :
-1
-Sample Input 3 :
-#
-Sample Output 3 :
--1
 
+Line 1 : No of rows(n) & No of columns(m) (separated by space)
 
+Line 2 : Row 1 elements (separated by space)
+
+Line 3 : Row 2 elements (separated by space)
+
+Line 4 : and so on
+
+Sample Input :
+3 3
+1    2    3
+4    5    6
+7    8    9
+Sample Output :
+1    2    3
+1    2    3
+1    2    3
+4    5    6
+4    5    6
+7    8    9
 /****************************************** SOLUTION *************************************************************************************/
 
-#include<iostream>
+	
+	
+#include <iostream>
 using namespace std;
-int main() {
+void print2DArray(int **input, int row, int col) {
 	// Write your code here
-	char a;
-    cin>> a;
-    
-    if(a >='a' && a <='z'){
-        cout<<"0";
-    }
-    else if(a >= 'A' && a <= 'Z'){
-        cout<<"1";
-    }
-    else{
-        cout<<"-1";
+    int k = row;
+    for(int i=0;i<row;i++){
+        for(int l =k-1;l>=0;l--){
+            for(int j=0;j<col;j++){
+                cout<<input[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        k--;
     }
 }
