@@ -25,14 +25,19 @@ Sample Output 2:
 
 
 int DuplicateNumber(int arr[], int size) {
-    int duplicate;
-    for(int i = 0; i < size - 1; ++i) {
-        for(int j = i + 1; j < size; ++j) {
-            if(arr[i] == arr[j]) { 
-                duplicate = arr[i];
-                break;
+    int i=0;
+    while(i<size){
+        int j=i+1;
+        while(j<size){
+            if(arr[i]==arr[j]){
+                return arr[i];
+            }
+            else{
+                j++;
             }
         }
+            i++;
     }
-    return duplicate;
+   
+   
 }
